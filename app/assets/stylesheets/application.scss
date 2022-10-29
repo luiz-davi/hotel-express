@@ -14,8 +14,11 @@
  *= require_self
  */
 
- .button{
-  border: none;
-  background-color: yellow;
+html{
+  background-color: black;
   color: white;
- }
+}
+
+body{
+  margin: 0px;
+}
