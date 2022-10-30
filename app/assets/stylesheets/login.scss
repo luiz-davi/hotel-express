@@ -27,6 +27,14 @@
   color: grey;
 }
 
+.alert-email-login{
+  color: red;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  display: none;
+}
+
 .login-button{
   border-radius: 5px;
   border: none;
@@ -43,4 +51,8 @@
 
 .sign-up{
   text-decoration: none;
+}
+
+.form-alert{
+  border: 2px solid red;
 }
