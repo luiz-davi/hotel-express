@@ -1,5 +1,6 @@
 const loginPassword = document.querySelector("#user_email");
 const alert_email_login = document.querySelector("#alert-email-login");
+console.log("estou na tela de sessão");
 
 loginPassword.addEventListener("change", function(e) {
   if(!e.target.value.includes("@gmail.com") || e.target.value.length <= 10){

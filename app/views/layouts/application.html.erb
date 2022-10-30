@@ -3,6 +3,7 @@
   <head>
     <title>HotelExpress</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="imagem/png" href=<%= image_url("/icons/sistem-icon.png") %> >
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -26,6 +27,9 @@
         <strong>😣 <%=alert%></strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
+    <% end %>
+    <% if !user_signed_in?%>
+      <%= render "devise/shared/error_messages", resource: resource %>
     <% end %>
     <%= yield %>
   </body>
