@@ -3,4 +3,4 @@ import "@hotwired/turbo-rails"
 import "controllers"
 
 import "home/apresentation_page"
-import "devise/login"
+import "devise/devise"
