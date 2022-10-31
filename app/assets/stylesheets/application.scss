@@ -13,9 +13,19 @@
  *= require_tree .
  *= require_self
  */
+html, body{
+  height: 100%;
+}
 
- .button{
-  border: none;
-  background-color: yellow;
-  color: white;
- }
+.callback{
+  float: right;
+  z-index: 1;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.notice-alert{
+  color: red;
+}
+
+

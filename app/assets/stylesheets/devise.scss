@@ -1,0 +1,74 @@
+.login-page{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-family: "Rubik";
+}
+
+.login-title{
+  text-align: center;
+}
+
+.card{
+  border-radius: 10px;
+  position: relative;
+  margin-top: 10vh;
+  margin-left: 7vh;
+  height: 70vh;
+  width: 55vh;
+  padding-right: 20px;
+  padding-left: 20px;
+  justify-content: center;
+  box-shadow: 20px 20px;  
+}
+
+.registration{
+  margin-top: 7vh;
+  height: 85vh;
+  width: 55vh;
+  justify-content:start;
+  padding-top: 10px;
+}
+
+.password-desc{
+  font-size: 13px;
+  color: grey;
+}
+
+.alert-email-login{
+  color: red;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  display: none;
+}
+
+.login-button{
+  border-radius: 5px;
+  border: none;
+  width: 17vh;
+  height: 5vh;
+  background-color: grey;
+  color: white;  
+}
+
+.login-button:hover{
+  border: 2px solid black;
+  color: black;
+}
+
+.sign-up{
+  text-decoration: none;
+}
+
+.form-alert{
+  border: 2px solid red;
+}
+
+.edit-user{
+  height: 90vh;
+  width: 100vh;
+  margin-top: 4.5vh;
+  margin-left: 20vh;
+  padding-top: 0px;
+}
