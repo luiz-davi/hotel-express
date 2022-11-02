@@ -1,0 +1,49 @@
+.side-bar{
+  background-color: teal;
+}
+.side-button{
+  font-size: 13px;
+  border: none;
+  color: black;
+  background-color: #008B8B;
+  border-radius: 5px;
+  padding: 2px 10px;
+  margin-top: 10px;
+  transition: 0.2s;
+  border: 2.5px solid black;
+  box-shadow: 0px 2px black;
+}
+
+.side-button:hover{
+  box-shadow: 5px 5px black;
+  transform: scale(0.9);
+}
+
+.side-buttons{
+  margin-top: 45vh;
+  text-align: left;
+}
+
+.option-icon{
+  text-align: left;
+  transition: 0.2s;
+}
+
+.option-icon:hover{
+  transform: scale(1.2);
+}
+
+.link{
+  text-decoration: none;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.content{
+  color: black;
+}
+
+.content:hover{
+  text-decoration: underline;
+  color: blue;
+}
