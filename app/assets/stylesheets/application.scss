@@ -13,8 +13,41 @@
  *= require_tree .
  *= require_self
  */
-html, body{
+
+.yield{
+  font-family: "Rubik";
   height: 100%;
+  width: 100%;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: #20B2AA;
+}
+
+header{
+  position: fixed;
+  font-family: "Rubik";
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  background-color: rgba(0,0,0,.0); 
+  text-align: right;
+  padding-right: 100px;
+  padding-top: 20px;
+  height: 50px;
+  .menu-button{
+    transition: 0.3s;
+  }
+  
+  .menu-button:hover{
+    transform: scale(1.3);
+  }
+  // margin-bottom: ;
 }
 
 .callback{
