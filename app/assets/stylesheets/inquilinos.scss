@@ -1,0 +1,94 @@
+.index-inquilino{
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+#inquilinos{
+  margin-top: 20px;
+}
+.unity-inquilino{
+  width: 30%;
+  color: black;
+  transition: 0.5s;
+  margin-bottom: 10px;
+  margin-right: 7px;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-left: 15px;
+  box-shadow: 0px 0px 3.5px grey;
+}
+
+.unity-inquilino:hover{
+  transform: scale(0.9);
+}
+
+.inquilino-options{
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+
+.title-inq{
+  display: flex;
+  width: 100%;
+  h1{
+    width: 18%;
+  }
+  div{
+    width: 10%; 
+    text-align: left;
+  }
+}
+
+.add-button{
+  text-decoration: none;
+  font-size: 17px;
+  border: none;
+  color: black;
+  background-color: #00FA9A;
+  border-radius: 5px;
+  padding: 2px 10px;
+  transition: 0.2s;
+  border: 2.5px solid black;
+  box-shadow: 0px 2px black;
+}
+
+.add-button:hover{
+  color: black;
+  box-shadow: 5px 5px black;
+  transform: scale(1.1);
+}
+
+.pesquisa-inq{
+  padding-right: 100px;
+  text-align: right;
+}
+
+.input-search{
+  text-align: center;
+  width: 40%;
+  height: 45px;
+  margin: 0px;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  box-shadow: inset 0px 0px 4px #D3D3D3;
+}
+
+.search-button{
+  text-align: left;
+  border: none;
+  color: white;
+  border-radius: 10px 0px 0px 10px;
+  height: 41px;
+  background-color: #1E90FF;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.search-button:hover{
+  border-radius: 10px;
+  transform: scale(1.3);
+}

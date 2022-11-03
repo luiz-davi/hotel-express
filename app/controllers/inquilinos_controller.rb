@@ -1,0 +1,62 @@
+class InquilinosController < ApplicationController
+  before_action :authenticate_user!
+  before_action :set_inquilino, only: %i[ show edit update destroy ]
+
+  def index
+    @inquilinos = Inquilino.all
+  end
+
+  def show
+  end
+
+  def new
+    @inquilino = Inquilino.new
+  end
+
+  def edit
+  end
+
+  def create
+    @inquilino = Inquilino.new(inquilino_params)
+
+    respond_to do |format|
+      if @inquilino.save
+        format.html { redirect_to inquilino_url(@inquilino), notice: "Inquilino was successfully created." }
+        format.json { render :show, status: :created, location: @inquilino }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @inquilino.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def update
+    respond_to do |format|
+      if @inquilino.update(inquilino_params)
+        format.html { redirect_to inquilino_url(@inquilino), notice: "Inquilino was successfully updated." }
+        format.json { render :show, status: :ok, location: @inquilino }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @inquilino.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy
+    @inquilino.destroy
+
+    respond_to do |format|
+      format.html { redirect_to inquilinos_url, notice: "Inquilino was successfully destroyed." }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    def set_inquilino
+      @inquilino = Inquilino.find(params[:id])
+    end
+
+    def inquilino_params
+      params.require(:inquilino).permit(:name, :sobrenome, :telefone, :email, :numero, :andar, :complemento)
+    end
+end

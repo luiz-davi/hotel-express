@@ -1,0 +1,40 @@
+<div class="index-inquilino">
+  <h1>Inquilinos</h1>
+  <a type="button" class="add-button" href=<%= new_inquilino_path %> >
+    Cadastrar novo inquilino
+  </a>
+  <div class="pesquisa-inq">
+    <form action=<%= inquilinos_path %> method="get" >
+      <button class="search-button">
+        Pesquisar
+      </button>
+      <input class="input-modal-create input-search" type="text" name="search" placeholder="Pesquisar por...">
+    </form>
+  </div>
+  <div id="inquilinos">
+    <% @inquilinos.each do |inquilino| %>
+      <label class="unity-inquilino">
+        <strong>Nome:</strong> <%= "#{inquilino.name} #{inquilino.sobrenome}" %><br>
+        <strong>Telefone:</strong> <%= inquilino.telefone %><br>
+        <strong>Email:</strong> <%= inquilino.email ? inquilino.email : "Sem email" %><br>
+        <strong>Numero:</strong> <%= inquilino.numero %><br>
+        <strong>Andar:</strong> <%= inquilino.andar %>°<br>
+        <strong>Complemento:</strong> <%= inquilino.complemento %>
+        <div class="inquilino-options">
+            <%= link_to(
+              image_tag("/icons/edit.png", size: "30x30"), 
+              edit_inquilino_path(inquilino)
+            ) %>
+            <%= link_to(
+              image_tag("/icons/excluir.png", size: "30x30"), 
+              inquilino_path(inquilino),
+              data: { 
+                "turbo-method": :delete,
+                "turbo-confirm": "Tem certeza?"  
+              }
+            ) %>
+        </div>
+      </label>
+    <% end %>
+  </div>
+<div>

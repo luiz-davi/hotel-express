@@ -1,0 +1,8 @@
+<%= render @inquilino %>
+
+<div>
+  <%= link_to "Edit this inquilino", edit_inquilino_path(@inquilino) %> |
+  <%= link_to "Back to inquilinos", inquilinos_path %>
+
+  <%= button_to "Destroy this inquilino", @inquilino, method: :delete %>
+</div>

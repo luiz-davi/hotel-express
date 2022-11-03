@@ -1,0 +1,52 @@
+<%= form_with(model: inquilino) do |form| %>
+  <% if inquilino.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(inquilino.errors.count, "error") %> prohibited this inquilino from being saved:</h2>
+
+      <ul>
+        <% inquilino.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :sobrenome, style: "display: block" %>
+    <%= form.text_field :sobrenome %>
+  </div>
+
+  <div>
+    <%= form.label :telefone, style: "display: block" %>
+    <%= form.text_field :telefone %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :numero, style: "display: block" %>
+    <%= form.text_field :numero %>
+  </div>
+
+  <div>
+    <%= form.label :andar, style: "display: block" %>
+    <%= form.text_field :andar %>
+  </div>
+
+  <div>
+    <%= form.label :complemento, style: "display: block" %>
+    <%= form.text_field :complemento %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
