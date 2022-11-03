@@ -1,5 +1,11 @@
-.side-bar{
-  background-color: teal;
+#offcanvasWithBothOptions{
+  z-index: 99999999999999;
+  color: white;
+  background-color: #20B2AA;
+  width: 350px;
+  li{
+    background-color: inherit;
+  }
 }
 .side-button{
   font-size: 13px;
@@ -18,7 +24,7 @@
 }
 
 .me{
-  background-color: #48D1CC;
+  background-color: #5CFFFF;
 }
 
 .side-button:hover{
@@ -27,7 +33,7 @@
 }
 
 .side-buttons{
-  margin-top: 45vh;
+  margin-top: 100%;
   text-align: right;
 }
 
@@ -47,10 +53,10 @@
 }
 
 .content{
-  color: black;
+  color: white;
 }
 
 .content:hover{
   text-decoration: underline;
-  color: blue;
+  color: black;
 }
