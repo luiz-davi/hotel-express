@@ -1,10 +1,12 @@
-<h1>Editing inquilino</h1>
-
-<%= render "form", inquilino: @inquilino %>
-
-<br>
-
-<div>
-  <%= link_to "Show this inquilino", @inquilino %> |
-  <%= link_to "Back to inquilinos", inquilinos_path %>
+<div style="position: absolute;">
+  <div class="inq-card">
+    <h1 id="titleEditInq">Editar inquilino</h1>
+    <%= render "form", inquilino: @inquilino %>
+    <div>
+      <%= link_to "Inquilinos", inquilinos_path %>
+    </div>
+  </div>
 </div>
+<script type="text/javascript">
+  document.body.style.backgroundColor = "#5F9EA0"
+</script>

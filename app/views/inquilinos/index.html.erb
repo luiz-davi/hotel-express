@@ -5,7 +5,7 @@
   </a>
   <div class="pesquisa-inq">
     <form action=<%= inquilinos_path %> method="get" >
-      <input class="input-modal-create input-search" type="text" name="search" placeholder="Pesquisar por...">
+      <input class="input-modal-create input-search" type="text" name="search" placeholder="Pesquisar por..." value=<%= @search %>>
       <button class="search-button">
          <%= image_tag("/icons/search.png", size: "30x30") %>
     </form>

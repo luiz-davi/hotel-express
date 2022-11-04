@@ -1,52 +1,53 @@
 <%= form_with(model: inquilino) do |form| %>
-  <% if inquilino.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(inquilino.errors.count, "error") %> prohibited this inquilino from being saved:</h2>
-
-      <ul>
-        <% inquilino.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+  <div class="forms-inq">
+    <div class="input-inq" style="margin-right: 5px">
+      <%= form.label :name, style: "display: block" %>
+      <%= form.text_field :name, class: "form-control" %>
     </div>
-  <% end %>
+    <div class="input-inq">
+      <%= form.label :sobrenome, style: "display: block" %>
+      <%= form.text_field :sobrenome, class: "form-control" %>
+    </div>
+  </div>
+  <div class="forms-inq">
+    <div class="input-inq" style="margin-right: 5px">
+      <%= form.label :telefone, style: "display: block" %>
+      <%= form.text_field :telefone, class: "form-control" %>
+    </div>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <div class="input-inq">
+      <%= form.label :email, style: "display: block" %>
+      <%= form.text_field :email, class: "form-control" %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :sobrenome, style: "display: block" %>
-    <%= form.text_field :sobrenome %>
-  </div>
+  <div class="forms-inq">
+    <div class="input-inq" style="margin-right: 5px">
+      <%= form.label :numero, style: "display: block" %>
+      <%= form.text_field :numero, class: "form-control" %>
+    </div>
 
-  <div>
-    <%= form.label :telefone, style: "display: block" %>
-    <%= form.text_field :telefone %>
-  </div>
-
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div>
-    <%= form.label :numero, style: "display: block" %>
-    <%= form.text_field :numero %>
-  </div>
-
-  <div>
-    <%= form.label :andar, style: "display: block" %>
-    <%= form.text_field :andar %>
+    <div class="input-inq">
+      <%= form.label :andar, style: "display: block" %>
+      <%= form.text_field :andar, class: "form-control" %>
+    </div>
   </div>
 
   <div>
     <%= form.label :complemento, style: "display: block" %>
-    <%= form.text_field :complemento %>
+    <%= form.text_field :complemento, class: "form-control" %>
   </div>
+  <br>
 
-  <div>
-    <%= form.submit %>
-  </div>
+  <button type="submit" class="login-button">
+    Atualizar
+  </button>
+
+  <% if inquilino.errors.any? %>
+      <ul id="errors-inq" class="list-group list-group-flush">
+        <% inquilino.errors.each do |error| %>
+          <li class="list-group-item message-error"><%= error.full_message %></li>
+        <% end %>
+      </ul>
+  <% end %>
 <% end %>

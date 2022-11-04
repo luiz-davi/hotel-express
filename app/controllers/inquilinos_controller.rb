@@ -3,21 +3,28 @@ class InquilinosController < ApplicationController
   before_action :set_inquilino, only: %i[ show edit update destroy ]
 
   def index
-    @inquilinos = Inquilino.all
+    @inquilinos = current_user.inquilinos
+    @search = search
+    if search
+      @inquilinos = @inquilinos.where("name LIKE '%#{@search}%' OR
+                                       sobrenome LIKE '%#{@search}%' OR
+                                       andar LIKE '%#{@search.upcase}%' OR
+                                       numero LIKE '%#{@search}%'")
+    end
   end
 
   def show
   end
 
   def new
-    @inquilino = Inquilino.new
+    @inquilino = current_user.inquilinos.new
   end
 
   def edit
   end
 
   def create
-    @inquilino = Inquilino.new(inquilino_params)
+    @inquilino = current_user.inquilinos.new(inquilino_params)
 
     respond_to do |format|
       if @inquilino.save
@@ -53,10 +60,14 @@ class InquilinosController < ApplicationController
 
   private
     def set_inquilino
-      @inquilino = Inquilino.find(params[:id])
+      @inquilino = current_user.inquilinos.find(params[:id])
     end
 
     def inquilino_params
       params.require(:inquilino).permit(:name, :sobrenome, :telefone, :email, :numero, :andar, :complemento)
+    end
+
+    def search
+      params[:search]
     end
 end

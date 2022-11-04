@@ -6,7 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Inquilino.find_or_create_by(
+user1 = User.create(email: "luiz@gmail.com", password: "123456", password_confirmation: "123456")
+user2 = User.create(email: "victor@gmail.com", password: "123456", password_confirmation: "123456")
+user3 = User.create(email: "mario@gmail.com", password: "123456", password_confirmation: "123456")
+
+
+user1.inquilinos.find_or_create_by(
   name: "Davi",
   sobrenome: "Mendes",
   telefone: "87991432198",
@@ -16,7 +21,7 @@ Inquilino.find_or_create_by(
   complemento: "A"
 )
 
-Inquilino.find_or_create_by(
+user1.inquilinos.find_or_create_by(
   name: "Victor",
   sobrenome: "Mendes",
   telefone: "8799525919",
@@ -26,7 +31,7 @@ Inquilino.find_or_create_by(
   complemento: "B"
 )
 
-Inquilino.find_or_create_by(
+user1.inquilinos.find_or_create_by(
   name: "Marcos",
   sobrenome: "Cavalcanti",
   telefone: "87991458963",
@@ -36,11 +41,31 @@ Inquilino.find_or_create_by(
   complemento: "C"
 )
 
-Inquilino.find_or_create_by(
+user1.inquilinos.find_or_create_by(
   name: "Julio",
   sobrenome: "Cesar",
   telefone: "87981780822",
   numero: "6",
   andar: "3",
   complemento: "A"
+)
+
+user1.inquilinos.find_or_create_by(
+  name: "Dwigth",
+  sobrenome: "Schrut",
+  email: "dwigth@gmail.com",
+  telefone: "87981435963",
+  numero: "9",
+  andar: "4",
+  complemento: "A"
+)
+
+user1.inquilinos.find_or_create_by(
+  name: "Ezequias",
+  sobrenome: "Martins",
+  email: "ezequias@gmail.com",
+  telefone: "87995563245",
+  numero: "15",
+  andar: "4",
+  complemento: "C"
 )

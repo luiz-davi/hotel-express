@@ -15,6 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_02_182132) do
   enable_extension "plpgsql"
 
   create_table "inquilinos", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "name"
     t.string "sobrenome"
     t.string "telefone"
@@ -24,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_02_182132) do
     t.string "complemento"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_inquilinos_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
