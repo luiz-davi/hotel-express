@@ -14,11 +14,11 @@
     <% @inquilinos.each do |inquilino| %>
       <label class="unity-inquilino">
         <strong>Nome:</strong> <%= "#{inquilino.name} #{inquilino.sobrenome}" %><br>
-        <strong>Telefone:</strong> <%= inquilino.telefone %><br>
-        <strong>Email:</strong> <%= inquilino.email ? inquilino.email : "Sem email" %><br>
+        <strong>Telefone:</strong> <%= inquilino.telefone ? inquilino.telefone : "Não informado." %><br>
+        <strong>Email:</strong> <%= inquilino.email ? inquilino.email : "Não informado." %><br>
         <strong>Numero:</strong> <%= inquilino.numero %><br>
         <strong>Andar:</strong> <%= inquilino.andar %>°<br>
-        <strong>Complemento:</strong> <%= inquilino.complemento %>
+        <strong>Complemento:</strong> <%= inquilino.complemento ? inquilino.complemento : "Não informado." %>
         <hr style="width: 300px">
         <div class="inquilino-options">
             <%= link_to(
