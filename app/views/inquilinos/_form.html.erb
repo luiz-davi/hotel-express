@@ -1,0 +1,152 @@
+<%= form_with(model: inquilino) do |form| %>
+  <div class="forms-inq">
+    <div class="input-inq" style="margin-right: 5px">
+      <%= form.label :name, style: "display: block", id: "label_name" %>
+      <%= form.text_field :name, class: "form-control" %>
+      <% if inquilino.errors.any? %>
+        <% unless inquilino.errors[:name].blank? %>
+          <div id="error_name" class="error_validation">
+            <%= inquilino.errors[:name].first %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="input-inq">
+      <%= form.label :sobrenome, style: "display: block", id:"label_sobrenome"%>
+      <%= form.text_field :sobrenome, class: "form-control" %>
+      <div id="error_message_sobrenome" style="display: none"></div>
+      <% if inquilino.errors.any? %>
+        <% unless inquilino.errors[:sobrenome].blank? %>
+          <div id="error_sobrenome" class="error_validation">
+            <%= inquilino.errors[:sobrenome].first %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="forms-inq">
+    <div class="input-inq" style="margin-right: 5px">
+      <%= form.label :telefone, style: "display: block", id: "label_telefone" %>
+      <%= form.text_field :telefone, class: "form-control" %>
+      <% if inquilino.errors.any? %>
+        <% unless inquilino.errors[:telefone].blank? %>
+          <div id="error_telefone" class="error_validation">
+            <%= inquilino.errors[:telefone].first %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="input-inq">
+      <%= form.label :email, style: "display: block", id: "label_email" %>
+      <%= form.text_field :email, class: "form-control" %>
+      <% if inquilino.errors.any? %>
+        <% unless inquilino.errors[:email].blank? %>
+          <div id="error_email" class="error_validation">
+            <%= inquilino.errors[:email].first %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="forms-inq">
+    <div class="input-inq" style="margin-right: 5px">
+      <%= form.label :numero, style: "display: block", id: "label_numero" %>
+      <%= form.text_field :numero, class: "form-control" %>
+      <% if inquilino.errors.any? %>
+        <% unless inquilino.errors[:numero].blank? %>
+          <div id="error_numero" class="error_validation">
+            <%= inquilino.errors[:numero].first %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="input-inq">
+      <%= form.label :andar, style: "display: block", id: "label_andar" %>
+      <%= form.text_field :andar, class: "form-control" %>
+      <% if inquilino.errors.any? %>
+        <% unless inquilino.errors[:andar].blank? %>
+          <div id="error_andar" class="error_validation">
+            <%= inquilino.errors[:andar].first %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div>
+    <%= form.label :complemento, style: "display: block", id: "label_complemento" %>
+    <%= form.text_field :complemento, class: "form-control" %>
+    <% if inquilino.errors.any? %>
+        <% unless inquilino.errors[:complemento].blank? %>
+          <div id="error_complemento" class="error_validation">
+            <%= inquilino.errors[:complemento].first %>
+          </div>
+        <% end %>
+      <% end %>
+  </div>
+  <br>
+
+  <button id="submit_button_inq" type="submit" class="login-button">
+    Aplicar
+  </button>
+  <script type="text/javascript">
+    var error_name = document.querySelector("#error_name");
+    var error_sobrenome = document.querySelector("#error_sobrenome");
+    var error_telefone = document.querySelector("#error_telefone");
+    var error_email = document.querySelector("#error_email");
+    var error_numero = document.querySelector("#error_numero");
+    var error_andar = document.querySelector("#error_andar");
+    var error_complemento = document.querySelector("#error_complemento");
+    var body = document.body;
+
+    if(body.contains(error_name)){
+      var field = document.querySelector("#inquilino_name");
+      var label = document.querySelector("#label_name");
+      error_field_input(field, label)
+    }
+
+    if(body.contains(error_sobrenome)){
+      var field = document.querySelector("#inquilino_sobrenome");
+      var label = document.querySelector("#label_sobrenome");
+      error_field_input(field, label)
+    }
+
+    if(body.contains(error_telefone)){
+      var field = document.querySelector("#inquilino_telefone");
+      var label = document.querySelector("#label_telefone");
+      error_field_input(field, label)
+    }
+
+    if(body.contains(error_email)){
+        var field = document.querySelector("#inquilino_email");
+        var label = document.querySelector("#label_email");
+        error_field_input(field, label)
+    }
+
+    if(body.contains(error_numero)){
+        var field = document.querySelector("#inquilino_numero");
+        var label = document.querySelector("#label_numero");
+        error_field_input(field, label)
+    }
+
+    if(body.contains(error_andar)){
+        var field = document.querySelector("#inquilino_andar");
+        var label = document.querySelector("#label_andar");
+        error_field_input(field, label)
+    }
+
+    if(body.contains(error_complemento)){
+        var field = document.querySelector("#inquilino_complemento");
+        var label = document.querySelector("#label_complemento");
+        error_field_input(field, label)
+    }
+
+    function error_field_input(field, label){
+      label.style.color = "red"
+      field.style.borderColor = "red";
+      field.style.color = "red";
+    }
+  </script>
+<% end %>

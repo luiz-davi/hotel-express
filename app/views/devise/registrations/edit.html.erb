@@ -1,5 +1,5 @@
 <div class="login-page" style="background-color: #20B2AA">
-  <%= render 'layouts/side_bar' %>
+  <%= render 'layouts/componentes/side_bar' %>
   <div class="card edit-user">
       <h2>Olá, <%= current_user.email %></h2>
 
@@ -36,7 +36,7 @@
           <%= f.submit "Atualizar", class: "login-button" %>
         </div>
 
-        <%= link_to "Back", root_path %>
+        <%= link_to "Back", :back %>
         <%= render "devise/shared/error_messages", resource: resource %>
       <% end %>
   </div>

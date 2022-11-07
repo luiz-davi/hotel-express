@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     get "users", to: "devise/sessions#new"
   end
   devise_for :users
+  resources :inquilinos, except: [ :show ]
   root to:'home#apresentation_page'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -1,0 +1,141 @@
+.index-inquilino{
+  color: white;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+#inquilinos{
+  margin-top: 20px;
+}
+.unity-inquilino{
+  background-color: white;
+  color: black;
+  width: 30%;
+  transition: 0.5s;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-left: 15px;
+  box-shadow: 3px 3px 10px black;
+  border: 2px solid black;
+}
+
+.unity-inquilino:hover{
+  border: 2px solid black;
+  box-shadow: 0px 0px;
+  transform: scale(0.97);
+}
+
+.inquilino-options{
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+
+.title-inq{
+  display: flex;
+  width: 100%;
+  h1{
+    width: 18%;
+  }
+  div{
+    width: 10%; 
+    text-align: left;
+  }
+}
+
+.add-button{
+  text-decoration: none;
+  font-size: 17px;
+  border: none;
+  color: black;
+  background-color: #00FA9A;
+  border-radius: 5px;
+  padding: 2px 10px;
+  transition: 0.2s;
+  border: 2.5px solid black;
+  box-shadow: 0px 3px black;
+}
+
+.add-button:hover{
+  color: black;
+  box-shadow: 5px 5px black;
+  transform: scale(1.1);
+}
+
+.pesquisa-inq{
+  padding-right: 100px;
+  text-align: right;
+}
+
+.input-search{
+  text-align: center;
+  width: 40%;
+  height: 45px;
+  margin: 0px;
+  margin-right: 0px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-button{
+  border: none;
+  border-radius: 10px;
+  width: 60px;
+  height: 45px;
+  background-color: #1E90FF;
+  transition: 0.2s;
+  margin-left: 0px
+}
+
+.search-button:hover{
+  border-radius: 10px;
+  transform: scale(1.4);
+}
+
+.inq-card{
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 5vh;
+  margin-left: 20vh;
+  height: 100%;
+  width: 100vh;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  box-shadow: 20px 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.forms-inq{
+  width: 100%;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.input-inq{
+  width: 50%;
+  margin-right: 5px;
+}
+
+#errors-inq{
+  margin-top: 10px;
+  justify-content: center;
+  font-weight: bold;
+  .message-error{
+    color: red;
+    font-size: 10px;
+  }
+}
+
+.error_validation{
+  font-weight: bold;
+  color: red;
+}
