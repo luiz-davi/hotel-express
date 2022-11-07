@@ -1,6 +1,6 @@
 class InquilinosController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_inquilino, only: %i[ show edit update destroy ]
+  before_action :set_inquilino, only: %i[ edit update destroy ]
 
   def index
     @inquilinos = current_user.inquilinos
@@ -13,8 +13,6 @@ class InquilinosController < ApplicationController
     end
   end
 
-  def show
-  end
 
   def new
     @inquilino = current_user.inquilinos.new
@@ -28,7 +26,7 @@ class InquilinosController < ApplicationController
 
     respond_to do |format|
       if @inquilino.save
-        format.html { redirect_to inquilino_url(@inquilino), notice: "Inquilino was successfully created." }
+        format.html { redirect_to inquilinos_path, notice: "#{@inquilino.name} foi cadastrado com sucesso!!" }
         format.json { render :show, status: :created, location: @inquilino }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +38,7 @@ class InquilinosController < ApplicationController
   def update
     respond_to do |format|
       if @inquilino.update(inquilino_params)
-        format.html { redirect_to inquilino_url(@inquilino), notice: "Inquilino was successfully updated." }
+        format.html { redirect_to inquilinos_path, notice: "#{@inquilino.name} foi atualizado com sucesso!!" }
         format.json { render :show, status: :ok, location: @inquilino }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +51,7 @@ class InquilinosController < ApplicationController
     @inquilino.destroy
 
     respond_to do |format|
-      format.html { redirect_to inquilinos_url, notice: "Inquilino was successfully destroyed." }
+      format.html { redirect_to inquilinos_url, notice: "#{@inquilino.name} foi arquivado com sucesso!!" }
       format.json { head :no_content }
     end
   end

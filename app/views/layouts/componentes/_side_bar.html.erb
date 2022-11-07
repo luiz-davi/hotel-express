@@ -1,0 +1,16 @@
+<% if user_signed_in? %>
+  <header >
+    <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+      <%= image_tag '/icons/menu.png', size: "40x40", class: "menu-button"%>
+    </a><br><br>
+    <% if @inquilinos %>
+      <a type="button" data-bs-toggle="modal" data-bs-target="#inqFilterModal">
+        <%= image_tag '/icons/inquilino-filter.png', size: "40x40", class: "menu-button"%>
+      </a>     
+    <% end %>
+
+
+    <%= render 'layouts/componentes/menu' %>
+
+  </header>
+<% end %>

@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-user1 = User.create(email: "luiz@gmail.com", password: "123456", password_confirmation: "123456")
-user2 = User.create(email: "victor@gmail.com", password: "123456", password_confirmation: "123456")
-user3 = User.create(email: "mario@gmail.com", password: "123456", password_confirmation: "123456")
+user1 = User.find_or_initialize_by(email: "luiz@gmail.com")
+user2 = User.find_or_initialize_by(email: "victor@gmail.com")
+user3 = User.find_or_initialize_by(email: "mario@gmail.com")
 
 
 user1.inquilinos.find_or_create_by(
