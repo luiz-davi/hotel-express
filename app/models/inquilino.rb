@@ -1,7 +1,10 @@
 class Inquilino < ApplicationRecord
   after_commit :check_telefone, :check_email, :check_complemento, only: [ :create, :update ]
+
   validates :name, :sobrenome, :numero, :andar, presence: true
   validates :telefone, :email, uniqueness: true
+
+  has_many :encomendas
 
   private
 
