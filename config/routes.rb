@@ -4,8 +4,9 @@ Rails.application.routes.draw do
     get "users", to: "devise/sessions#new"
   end
   devise_for :users
+  resources :encomendas
   resources :inquilinos, except: [ :show ]
-  root to:'home#apresentation_page'
+  root to:'encomendas#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
