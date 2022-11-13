@@ -14,20 +14,18 @@
   background-color: white;
   color: black;
   width: 30%;
-  transition: 0.5s;
+  transition: 0.8s;
   margin-bottom: 15px;
   margin-right: 20px;
   border-radius: 10px;
   padding-top: 15px;
   padding-left: 15px;
-  box-shadow: 3px 3px 10px black;
   border: 2px solid black;
 }
 
 .unity-inquilino:hover{
-  border: 2px solid black;
-  box-shadow: 0px 0px;
-  transform: scale(0.97);
+  box-shadow: 3px 3px black;
+  transform: scale(1.03);
 }
 
 .inquilino-options{
