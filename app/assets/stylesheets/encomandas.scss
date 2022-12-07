@@ -1,0 +1,32 @@
+.index-encomenda{
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.encomendas{
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.listagem-encomendas{
+  width: 70%;
+}
+
+.encomenda{
+  width: 30%;
+  color: white;
+}
+
+.filter-encomendas{
+  width: 30%;
+  height: 400px;
+  margin-right: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: -5px 5px black;
+  background-color: #E9EAEC;
+}

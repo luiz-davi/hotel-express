@@ -1,14 +1,26 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Encomendas</h1>
-
-<div id="encomendas">
-  <% @encomendas.each do |encomenda| %>
-    <%= render encomenda %>
-    <p>
-      <%= link_to "Show this encomenda", encomenda %>
-    </p>
-  <% end %>
+<div class="index-encomenda">
+  <h1 style="color: white">Encomendas</h1>
+  <%= link_to "New encomenda", new_encomenda_path %>  
+  <div class="encomendas">
+    <div class="filter-encomendas">
+      <h3>Filtros</h3>
+    </div>
+    <div class="listagem-encomendas">
+      <% @encomendas.each do |encomenda| %>
+        <label class="encomenda">
+          <%= encomenda.inquilino.name %><br>
+          <%= encomenda.observacao.blank? ? "Sem observação" : encomenda.observacao %>
+          <% if encomenda.data_entregue %>
+            <br><%= encomenda.data_entregue%>
+          <% end %>
+          <p>
+            <%= link_to "Show this encomenda", encomenda %>
+          </p> 
+        </label>
+      <% end %>
+    </div>
+  </div>
 </div>
-
-<%= link_to "New encomenda", new_encomenda_path %>
+<script type="text/javascript">
+  document.body.style.backgroundColor = "#345351";
+</script>
